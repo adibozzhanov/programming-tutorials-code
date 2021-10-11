@@ -51,7 +51,7 @@
  Use this table to reference useful commands:
  
  | Command  | explanation  |
- |:-:|:-:|
+ |:--|:--|
  | `quit`  | quit the debugger  |
  | `run`  | run your code  |
  | `break <line_num>`  | set a break point at a specific line number. Once you run, Debugger will stop and prompt for action every single time your code happens to reach that line  |
@@ -62,3 +62,5 @@
  | `s` | Execute 1 next step |
  | `n` | Keep executing untl the code reaches next line |
  | `bt` | Backtrack - show all the nesting of function that happened (print backtrace of all stack frames is the proper way to say it)| 
+
+
