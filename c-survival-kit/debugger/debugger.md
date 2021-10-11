@@ -54,7 +54,7 @@
  | :-:|---|
  | `quit`  | quit the debugger  |
  | `run`  | run your code  |
- | `break <line_num>`  | set a break point at a specific line number.<br> Once you run, Debugger will stop and prompt for action every single time your code happens to reach that line  |
+ | `break <line_num>`  | set a break point at a specific line number.<br> Once you run, Debugger will stop and prompt for action <br>every single time your code happens to reach that line  |
  | `l`  | Show code that is currently next to where you stopped  |
  | `l <line number>` | Show code that is next to the line number you entered |
  | `print <variable_name>` | print the current value of a variable|
