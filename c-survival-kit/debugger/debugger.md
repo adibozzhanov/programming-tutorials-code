@@ -61,6 +61,6 @@
  | `c` | Continue execution until next breakpoint or until the program stops |
  | `s` | Execute 1 next step |
  | `n` | Keep executing untl the code reaches next line |
- | `bt` | Backtrack - show all the nesting of function that happened (print backtrace of all stack frames is the proper way to say it)| 
+ | `bt` | Backtrack - show all the nesting of function that happened<br>(print backtrace of all stack frames is the proper way to say it)| 
 
 
