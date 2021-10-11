@@ -51,7 +51,7 @@
  Use this table to reference useful commands:
  
  | Command  | Explanation  |
- | :-:|--:|
+ | :-:|---|
  | `quit`  | quit the debugger  |
  | `run`  | run your code  |
  | `break <line_num>`  | set a break point at a specific line number.<br> Once you run, Debugger will stop and prompt for action every single time your code happens to reach that line  |
