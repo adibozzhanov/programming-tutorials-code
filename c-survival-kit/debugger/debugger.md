@@ -64,7 +64,7 @@
  | `bt` | Backtrack - show all the nesting of function that happened<br>(print backtrace of all stack frames is the proper way to say it)| 
 
 
- Basically use this table. If you already have a segfault then just run it and the program will stop wherever the segfault is anyway and you can do bt check values of variables and stuff.
+ Basically use this table. If you already have a segfault then just run it and the program will stop wherever the segfault is anyway and you can do bt, check values of variables and stuff.
  
  If you want the program to stop at a specific line set a breakpoint there and then run.
  
