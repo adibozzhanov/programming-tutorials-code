@@ -57,7 +57,7 @@
  | `break <line_num>`  | set a break point at a specific line number.<br> Once you run, Debugger will stop and prompt for action every single time your code happens to reach that line  |
  | `l`  | Show code that is currently next to where you stopped  |
  | `l <line number>` | Show code that is next to the line number you entered |
- | `p <variable name>` | print the current value of a variable|
+ | `p <variable_name>` | print the current value of a variable|
  | `c` | Continue execution until next breakpoint or until the program stops |
  | `s` | Execute 1 next step |
  | `n` | Keep executing untl the code reaches next line |
