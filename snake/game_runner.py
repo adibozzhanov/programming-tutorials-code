@@ -4,6 +4,10 @@ from tkinter import *
 import time
 
 
+# grid[y][x] == 0 - nothing
+# grid[y][x] == 1 - snake
+# grid[y][x] == 2 - food
+# food
 class GameRunner:
     def __init__(self, width):
         self.grid = [[0 for i in range(width)] for i in range(width)]
@@ -32,18 +36,17 @@ class GameRunner:
         return new_x, new_y
 
     def spawn_food(self):
-
-        pass
+        self.grid[1][1] = 2
 
     def register_player(self, player):
         self.player = player
 
     def run(self, root):
-
         vh = ViewHandler(root, width=500, height=500)
 
         alive = True
         self.spawn_snake()
+        self.spawn_food()
 
         while alive:
             move = self.player.make_move(self.grid)
