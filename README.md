@@ -13,8 +13,10 @@
   This just downloads files
 
 - `git fetch`
-
+  Check whether remote changed
+  
 - `git pull`
+  Pulls changed from remote
 
 - `git status`
   This says what changed
