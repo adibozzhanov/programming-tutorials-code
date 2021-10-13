@@ -36,7 +36,7 @@ class GameRunner:
         return new_x, new_y
 
     def spawn_food(self):
-        self.grid[1][1] = 2
+        self.grid[2][2] = 2
 
     def register_player(self, player):
         self.player = player
