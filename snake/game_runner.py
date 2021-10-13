@@ -32,8 +32,7 @@ class GameRunner:
         return new_x, new_y
 
     def spawn_food(self):
-
-        pass
+        self.grid[2][2] = 2
 
     def register_player(self, player):
         self.player = player
@@ -44,6 +43,7 @@ class GameRunner:
 
         alive = True
         self.spawn_snake()
+        self.spawn_food()
 
         while alive:
             move = self.player.make_move(self.grid)
