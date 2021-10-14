@@ -6,6 +6,7 @@ if __name__ == "__main__":
 
     root = Tk()
     root.title("Snake")
+    print("fdsjakl;fds")
 
     player = Player(root)
 
