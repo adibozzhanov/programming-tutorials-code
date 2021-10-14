@@ -2,6 +2,7 @@ from view_handler import ViewHandler
 from snake import Snake
 from tkinter import *
 import time
+from random import randint
 
 
 # grid[y][x] == 0 - nothing
@@ -36,10 +37,14 @@ class GameRunner:
         return new_x, new_y
 
     def spawn_food(self):
-        self.grid[2][5] = 2
-        self.grid[3][3] = 2
-        print("hello worlds")
-        print("aaaaaaaaaaaaaaaaaaaaa")
+        check = False
+        while not check:
+            x = randint(0,4)
+            y = randint(0,4)
+            if self.grid[x][y] != 1:
+                self.grid[x][y] = 2
+                check = True
+                print("(spawning) EAT ME!")
 
     def register_player(self, player):
         self.player = player
