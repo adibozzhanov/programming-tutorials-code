@@ -39,8 +39,8 @@ class GameRunner:
     def spawn_food(self):
         check = False
         while not check:
-            x = randint(0,4)
-            y = randint(0,4)
+            x = randint(0, 4)
+            y = randint(0, 4)
             if self.grid[x][y] != 1:
                 self.grid[x][y] = 2
                 check = True
@@ -73,6 +73,7 @@ class GameRunner:
 
             if point == 2:
                 self.snake.move(new_x, new_y, True)
+                self.grid[new_y][new_x] = 1
 
             time.sleep(0.2)
             vh.draw_grid(self.grid)
