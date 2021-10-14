@@ -22,7 +22,7 @@
   This says what changed
   
 - `git reset --hard`
-  ABORT.
+  Panic button.
   
   You messed up your code and you want to go back to your last commit.
 
