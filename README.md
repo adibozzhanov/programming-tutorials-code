@@ -4,11 +4,11 @@
 # Git Commands:
 
 - `git add`
-
+  Adds your current changes to be committed
 - `git commit`
-
+  Makes a commit 
 - `git push`
-
+  Pushes your commits to remote
 - `git clone`
   This just downloads files
 
