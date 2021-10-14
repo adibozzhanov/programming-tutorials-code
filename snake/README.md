@@ -16,4 +16,6 @@
 
 - Add WASD support for the player controlls `player.py: line 6`
 
+- spawn new food once the old one is eaten `game_runner.py: line 70`
+
 - pass in infromation about snake head through the player.make_move() `game_runenr.py: line 63` and `player.py: line 11`
