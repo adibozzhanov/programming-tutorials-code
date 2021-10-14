@@ -26,4 +26,3 @@
   
   You messed up your code and you want to go back to your last commit.
 
-:)

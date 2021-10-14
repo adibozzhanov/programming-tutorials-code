@@ -1,3 +1,11 @@
+# How to run
+
+- Make sure you have tkinter
+
+- `python3 run.py`
+
+- That's it...
+
 # Tasks to do:
 
 - random food generation `game_runner.py: line: 38`
