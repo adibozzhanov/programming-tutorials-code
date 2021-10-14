@@ -41,7 +41,6 @@ class GameRunner:
         print("hello worlds")
         print("aaaaaaaaaaaaaaaaaaaaa")
 
-
     def register_player(self, player):
         self.player = player
 
@@ -53,7 +52,7 @@ class GameRunner:
         self.spawn_food()
 
         while alive:
-            move = self.player.make_move(self.grid)
+            move = self.player.make_move(self.grid, self.snake.body[0])
             x, y = self.snake.body[0]
             new_x, new_y = self.calculate_coord(x, y, move)
 

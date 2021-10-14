@@ -8,7 +8,7 @@ class Player:
         self.master.bind("<Up>", lambda x: self.set_choice("UP"))
         self.master.bind("<Down>", lambda x: self.set_choice("DOWN"))
 
-    def make_move(self, grid):
+    def make_move(self, grid, head):
         return self.choice
 
     def set_choice(self, choice):
