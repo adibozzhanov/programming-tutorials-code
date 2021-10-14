@@ -20,7 +20,7 @@ class ViewHandler(Canvas):
                                           y + 1,
                                           x + cell_w - 1,
                                           y + cell_w - 1,
-                                          fill='white')
+                                          fill='blue')
                 if grid[row][col] == 2:
                     self.create_rectangle(x + 1,
                                           y + 1,
