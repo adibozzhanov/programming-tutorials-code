@@ -16,12 +16,14 @@
   Check whether remote changed
   
 - `git pull`
-  Pulls changed from remote
+  Pulls changes from remote
 
 - `git status`
   This says what changed
   
 - `git reset --hard`
-  You messed up your code and you want to go back (fuk go back button)
+  ABORT.
+  
+  You messed up your code and you want to go back to your last commit.
 
 :)
