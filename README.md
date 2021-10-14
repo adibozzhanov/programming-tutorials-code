@@ -3,6 +3,8 @@
 
 # Git Commands:
 
+- fjkdas;fjklsda;lfk
+
 - `git add`
   Adds your current changes to be committed
 - `git commit`
