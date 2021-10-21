@@ -48,12 +48,15 @@ def fitness_quad(text, quadgrams):
     return fit / (len(text) - 3)
 
 
+# swap 2 random letters in the alphabet
 def mutate(alphabet):
     pos1 = random.randint(0, 25)
     pos2 = random.randint(0, 25)
     alphabet[pos1], alphabet[pos2] = alphabet[pos2], alphabet[pos1]
 
 
+# hill climbing
+# num_gen - number of times you need to attempt improving last best attempt
 def mono_decrypt(text, num_gen):
 
     quadgrams = init_quadgrams()
@@ -80,12 +83,15 @@ def mono_decrypt(text, num_gen):
     return mono_encrypt(best_alph, text)
 
 
+# initialises an array of random letter permutation
 def random_alphabet():
     choices = [chr(i + 65) for i in range(26)]
     random.shuffle(choices)
     return choices
 
 
+# encrypts the text using a given alphabet
+# alphabet - array of all letters
 def mono_encrypt(alphabet, text):
     # maps [A,B,C,D,E,...] to [Z,F,A,E,...] (a given alphabet)
     mapping = {}
