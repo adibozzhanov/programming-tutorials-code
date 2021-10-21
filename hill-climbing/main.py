@@ -1,8 +1,17 @@
 import random
 import math
 
-# alphabet - array of characters in a random order
-# text - text to encrypt
+
+# prints an attempt in a fancy way
+def print_attempt(best_alph, current_alph, text):
+    ret = ""
+    for char in text:
+        if best_alph.index(char) == current_alph.index(char):
+            ret = ret + "\033[0;37;40m" + char
+        else:
+            ret = ret + "\033[1;31;40m" + char
+
+    print("\n" * 100, ret, "\n" * 10, "\033[0;37;40m")
 
 
 # removes all non-alpha characters
@@ -58,11 +67,13 @@ def mono_decrypt(text, num_gen):
         mutate(attempt)
         encryption = mono_encrypt(attempt, c_text)
         fit = fitness_quad(encryption, quadgrams)
+
+        if (count % 20 == 0):
+            print_attempt(best_alph, attempt, encryption)
         if fit > best_fit:
             best_alph = attempt
             best_fit = fit
             count = 0
-            print("\n" * 100, encryption)
         else:
             count += 1
 
