@@ -45,7 +45,7 @@ def fitness_quad(text, quadgrams):
         substr = text[i:i + 4]
         if substr in quadgrams:
             fit += math.log(quadgrams[substr])
-    return fit / (len(text) - 3)
+    return fit
 
 
 # swap 2 random letters in the alphabet
@@ -56,16 +56,16 @@ def mutate(alphabet):
 
 
 # hill climbing
-# num_gen - number of times you need to attempt improving last best attempt
-def mono_decrypt(text, num_gen):
+# depth - number of times you need to attempt improving last best attempt
+def mono_decrypt(text, depth):
 
     quadgrams = init_quadgrams()
     c_text = clean_text(text)
     best_alph = random_alphabet()
-    best_fit = 0
+    best_fit = fitness_quad(mono_encrypt(best_alph, c_text), quadgrams)
 
     count = 0
-    while count < num_gen:
+    while count < depth:
         attempt = best_alph.copy()
         mutate(attempt)
         encryption = mono_encrypt(attempt, c_text)
@@ -73,6 +73,7 @@ def mono_decrypt(text, num_gen):
 
         if (count % 20 == 0):
             print_attempt(best_alph, attempt, encryption)
+
         if fit > best_fit:
             best_alph = attempt
             best_fit = fit
@@ -112,15 +113,16 @@ def mono_encrypt(alphabet, text):
 
 if __name__ == "__main__":
     text = """
-Psychologists believe that over-explaining is a trauma response. You’ve probably heard of the fight, flight or freeze responses to trauma, but one lesser known response is fawn. Fawn refers to people pleasing and over-explaining. You are trying to diffuse conflict and make yourself less than, to present yourself as a ‘non-threat’.
+Career and research
 
-How many times have you sent a long text explaining your reasons for saying no? Or your reasons for saying yes? Or your reasons for feeling a certain way? Brevity in texting is a power move. You don’t need to over-explain the way you feel or the reasons for saying yes or no. When you overcome your trauma response, you are able to live by your values. When you are value-driven and self-assured, you don’t feel the need to explain away every act or decision.
+While at the International Computer Science Institute (ICSI), Handley co-founded the AT&T Center for Internet Research, as well as the XORP open-source router project (2000).[7]
 
-When you over-explain in a long text, you are also opening yourself up to subconscious interpretation. You are presenting yourself as a ‘non-threat’ which unfortunately can make you look weak, needy or desperate. While these things aren’t inherently bad, they can deeply affect your self-esteem and worthiness in a relationship (social or intimate).
+Handley is a contributor to Internet Engineering Task Force (IETF) standards and a member of the IETF Routing Area Directorate and the Transport Area Directorate.[8] Previously he was a member of the Internet Architecture Board (IAB)[9] and chaired the IETF Multiparty Multimedia Session Control working group[10] and the IRTF Reliable Multicast Research Group.[11] He is the author or co-author of 34 Request for Comments (RFCs), including the Session Initiation Protocol,[12] Multipath TCP[13] and a series of other network protocols.
+Awards and honours
 
-That doesn’t mean that you should never express how you feel, but a text isn’t the right platform for it. Opt to meet in person to have a free flowing conversation — like you are playing a game of tennis. Sending a long text is like serving 100 tennis balls into someone’s court and expecting them to still want to play.
+Handley was awarded a Royal Society Wolfson Research Merit Award in 2003, and received the 2007 Roger Needham Award.[14][15] He was the recipient of the 2012 IEEE Internet Award[16] "For contributions to Internet multicast, telephony, congestion control and the shaping of open Internet standards and open-source systems in all these areas.", and the 2019 SIGCOMM Award "For fundamental contributions to Internet multimedia, multicast, congestion control and multi-path networks, and the standardization of Internet protocols in these domains".
 
-Instead of the texting essay, go for “can we meet for coffee later?”. It makes you come across as assured and confident. Plus, when you do make your point, it will be better received. 
+Handley was elected Fellow of the Royal Society (FRS) in 2019 for substantial contributions to the improvement of natural knowledge.[17]  
     """
     alph = random_alphabet()
 
