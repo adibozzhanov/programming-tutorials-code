@@ -4,3 +4,6 @@ class SmartPlayer:
 
     def make_move(self, grid, head):
         pass
+
+    def decide(self):
+        pass
