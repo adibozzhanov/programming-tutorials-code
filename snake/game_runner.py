@@ -51,6 +51,7 @@ class GameRunner:
 
     def run(self, root, good):
 
+
         # i added a comment
         vh = ViewHandler(root, width=500, height=500)
 
