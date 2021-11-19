@@ -49,10 +49,12 @@ class GameRunner:
     def register_player(self, player):
         self.player = player
 
-    def run(self, root, imscared):
+    def run(self, root):
 
         # i added a comment
         vh = ViewHandler(root, width=500, height=500)
+
+        # one more comment
 
         alive = True
         self.spawn_snake()
