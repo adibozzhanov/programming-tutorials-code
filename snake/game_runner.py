@@ -49,7 +49,7 @@ class GameRunner:
     def register_player(self, player):
         self.player = player
 
-    def run(self, root, good):
+    def run(self, root): # comment
 
 
         # i added a comment
