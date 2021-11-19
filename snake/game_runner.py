@@ -50,10 +50,13 @@ class GameRunner:
         self.player = player
 
     def run(self, root):
+
+        # i added a comment
         vh = ViewHandler(root, width=500, height=500)
 
         alive = True
         self.spawn_snake()
+        self.spawn_food()
         self.spawn_food()
 
         while alive:
@@ -75,5 +78,5 @@ class GameRunner:
                 self.snake.move(new_x, new_y, True)
                 self.grid[new_y][new_x] = 1
 
-            time.sleep(0.2)
+            time.sleep(0.1)
             vh.draw_grid(self.grid)
