@@ -49,7 +49,7 @@ class GameRunner:
     def register_player(self, player):
         self.player = player
 
-    def run(self, root, evil):
+    def run(self, root, imscared):
 
         # i added a comment
         vh = ViewHandler(root, width=500, height=500)
